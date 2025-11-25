@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Exotic Animals</title>
+  </head>
+  <body class="bg-white text-gray-800 scroll-smooth">
+    <nav
+      class="fixed top-0 left-0 w-full bg-green-600 text-white shadow-md z-50"
+    >
+      <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+        <h1 class="text-2xl font-bold">Exotic Animals</h1>
+        <div class="space-x-6 text-lg">
+          <a href="#home" class="hover:text-gray-300">Home</a>
+          <a href="#animals" class="hover:text-gray-300">Animals</a>
+          <a href="#about" class="hover:text-gray-300">About</a>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="pt-24 pb-16 text-center bg-green-50">
+      <h2 class="text-4xl font-bold text-green-700 mb-4">
+        Unique & Rare Animals
+      </h2>
+      <p class="text-lg max-w-2xl mx-auto">
+        Explore facts about four of the world’s strangest and rarest creatures.
+      </p>
+    </section>
+
+    <section
+      id="animals"
+      class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8 py-16"
+    >
+      <div class="bg-white rounded-2xl shadow p-4 border border-green-200">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShjVVBz0oG2IdOu7P3HPlyJ2tLkV5fIuEVf1k5freOSkKZJprwXj7RVpeXy516aACKz56mFEm74g_pRKAos3XTaIopG7FJl0rpIHjJM4t6hA&s=10"
+          class="w-full h-40 object-cover rounded-xl mb-3"
+        />
+        <h3 class="text-xl font-bold mb-2">Blobfish</h3>
+        <p class="text-sm mb-3">
+          A deep-sea fish known for its gelatinous appearance.
+        </p>
+        <button
+          onclick="openModal('blobfish')"
+          class="w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700"
+        >
+          More Info
+        </button>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 border border-green-200">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_p5xraYLD98rqnOif2Ce0RGJGS8X9Ec_IFPCo9FVGUE4pqKpS6TkBTpMTbSot7ZjePCT6E9nVlYLC1lQupGsJSSexHuGYsWK_8umvks8U&s=10"
+          class="w-full h-40 object-cover rounded-xl mb-3"
+        />
+        <h3 class="text-xl font-bold mb-2">Aye-aye</h3>
+        <p class="text-sm mb-3">
+          A nocturnal primate with long middle fingers used for foraging.
+        </p>
+        <button
+          onclick="openModal('aye')"
+          class="w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700"
+        >
+          More Info
+        </button>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 border border-green-200">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLQrYD8tIHLUnmpQ7FHHi75zsvrzXwoeqcWFDNY-M7_GWPZTfO8FeaKbIl5tcF-zVPPhsK1z5imiTYgshSPbRWUK1MlxfdHeSo_cUos0gZoQ&s=10"
+          class="w-full h-40 object-cover rounded-xl mb-3"
+        />
+        <h3 class="text-xl font-bold mb-2">Pangolin</h3>
+        <p class="text-sm mb-3">
+          The only mammal in the world fully covered in scales.
+        </p>
+        <button
+          onclick="openModal('pangolin')"
+          class="w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700"
+        >
+          More Info
+        </button>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 border border-green-200">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRePRYN9B77VZWP3gaMxc_j80ITgRccBMlJSP0iKJ2sqTXUrt-N6Rqu4e8NZjEqcHU8pPEed31ldt5y8cZ5WyPRkOw8upEb6TZO2WntSGqa&s=10"
+          class="w-full h-40 object-cover rounded-xl mb-3"
+        />
+        <h3 class="text-xl font-bold mb-2">Axolotl</h3>
+        <p class="text-sm mb-3">
+          A salamander known for its ability to regenerate limbs.
+        </p>
+        <button
+          onclick="openModal('axolotl')"
+          class="w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700"
+        >
+          More Info
+        </button>
+      </div>
+    </section>
+
+    <section id="about" class="bg-green-50 py-16 text-center">
+      <h2 class="text-3xl font-bold text-green-700 mb-4">About This Page</h2>
+      <p class="max-w-3xl mx-auto text-lg">
+        This page displays unique exotic animals with scientific and fact-based
+        descriptions.
+      </p>
+    </section>
+
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4 z-[60]"
+    >
+      <div class="bg-white rounded-2xl max-w-xl w-full p-6 relative shadow-xl">
+        <button
+          onclick="closeModal()"
+          class="absolute top-3 right-3 text-gray-600 text-2xl"
+        >
+          &times;
+        </button>
+
+        <img id="modal-img" class="w-full h-56 object-cover rounded-xl mb-4" />
+
+        <h2 id="modal-title" class="text-2xl font-bold mb-3"></h2>
+        <p id="modal-text" class="text-gray-700 mb-4"></p>
+
+        <div
+          id="video-slot"
+          class="w-full h-48 bg-gray-200 rounded-xl flex items-center justify-center text-gray-500"
+        >
+          Video Placeholder
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const animalData = {
+        blobfish: {
+          title: "Blobfish",
+          text: "Blobfish (Psychrolutes marcidus) lives 600–1200 meters deep...",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShjVVBz0oG2IdOu7P3HPlyJ2tLkV5fIuEVf1k5freOSkKZJprwXj7RVpeXy516aACKz56mFEm74g_pRKAos3XTaIopG7FJl0rpIHjJM4t6hA&s=10",
+          video:
+            "https://www.youtube.com/embed/7IntbT-lAAw?si=e8oAdguerVFmkg0Z",
+        },
+        aye: {
+          title: "Aye-aye",
+          text: "The aye-aye is a nocturnal lemur...",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_p5xraYLD98rqnOif2Ce0RGJGS8X9Ec_IFPCo9FVGUE4pqKpS6TkBTpMTbSot7ZjePCT6E9nVlYLC1lQupGsJSSexHuGYsWK_8umvks8U&s=10",
+          video:
+            "https://www.youtube.com/embed/qeEbugrccXY?si=MlqEQzT1xTVtDK4a",
+        },
+        pangolin: {
+          title: "Pangolin",
+          text: "Pangolins are the only mammals with keratin scales...",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLQrYD8tIHLUnmpQ7FHHi75zsvrzXwoeqcWFDNY-M7_GWPZTfO8FeaKbIl5tcF-zVPPhsK1z5imiTYgshSPbRWUK1MlxfdHeSo_cUos0gZoQ&s=10",
+          video:
+            "https://www.youtube.com/embed/q1O5B8I6cXs?si=sdrj3v9_CsH1Npg6",
+        },
+        axolotl: {
+          title: "Axolotl",
+          text: "Axolotls are neotenic amphibians...",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRePRYN9B77VZWP3gaMxc_j80ITgRccBMlJSP0iKJ2sqTXUrt-N6Rqu4e8NZjEqcHU8pPEed31ldt5y8cZ5WyPRkOw8upEb6TZO2WntSGqa&s=10",
+          video:
+            "https://www.youtube.com/embed/m-EL5Fti1TM?si=90gKTry4SdwKWuMU",
+        },
+      };
+
+      function openModal(key) {
+        const a = animalData[key];
+
+        document.getElementById("modal-img").src = a.img;
+        document.getElementById("modal-title").textContent = a.title;
+        document.getElementById("modal-text").textContent = a.text;
+
+        const videoBox = document.getElementById("video-slot");
+
+        if (a.video) {
+          videoBox.innerHTML = `
+            <iframe 
+              class="w-full h-full rounded-xl"
+              src="${a.video}"
+              allowfullscreen>
+            </iframe>`;
+        } else {
+          videoBox.innerHTML = `
+            <div class="w-full h-full flex items-center justify-center text-gray-500">
+              No Video Available
+            </div>`;
+        }
+
+        document.getElementById("modal").classList.remove("hidden");
+        document.getElementById("modal").classList.add("flex");
+      }
+
+      function closeModal() {
+        document.getElementById("modal").classList.add("hidden");
+        document.getElementById("modal").classList.remove("flex");
+        document.getElementById("video-slot").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>
